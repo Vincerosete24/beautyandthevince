@@ -1,0 +1,280 @@
+@media ( max-width: 1600px ) {
+    .featured-posts .glide__arrow--left {
+        left: 20px;
+    }
+    .featured-posts .glide__arrow--right {
+        right: 20px;
+    }    
+}
+@media ( max-width: 1200px ) {
+    .main-navigation a,
+    .top-navigation a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header-bottom .container-fluid, .site-header .container-fluid, .top-bar .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }        
+}
+@media ( max-width: 1024px ) {
+
+    .main-navigation.toggled .header-items>a {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .main-navigation .header-items:before {
+        display: none;
+    }
+    .woocommerce-links {
+        margin-top: 10px;
+    }
+    .header-centered .header-bottom, .header-default .header-bottom {
+        position: static;
+    }
+    .header-bottom {
+        border-top: 0;
+    }
+
+    .mobile-header {
+        display: block;
+    }
+    .desktop-header,
+    .header-bottom {
+        display: none;
+    }
+    .main-navigation div>ul>li:first-of-type a {
+        padding-left: 15px;
+    }
+    .main-navigation.toggled {
+        .row {
+            margin: 0;
+        }
+    }
+    .mobile-menu-close {
+        display: block;
+    }
+}
+@media ( max-width: 991px ) {
+    .woocommerce-links {
+        margin-left: 0;
+    }
+    .align-center-mobile {
+        text-align: center;
+    }
+    .site-title,
+    h1 {
+        @include font-size(36);
+    }
+    h2 {
+        @include font-size(28);
+    }
+    h3 {
+        @include font-size(24);
+    }
+    h4 {
+        @include font-size(20);
+    }
+    h5 {
+        @include font-size(16);
+    }
+    .top-navigation {
+        display: none;
+    }
+
+    .site-main {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .widget-area {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 45px;
+    }
+    .sidebar-cart {
+        width: 300px;
+    }
+    .single-product div.product .entry-summary {
+        padding-left: 20px;
+    }
+    .footer-widgets {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .header-inline {
+
+        .site-header {
+            position: static;
+        }
+    }
+
+}
+@media ( max-width: 767px ) {
+
+    .woocommerce-MyAccount-navigation {
+        border-right: 0;
+    }
+    .woocommerce-MyAccount-content {
+        padding-left: 0;
+    }
+    .woocommerce-account .entry-content>.woocommerce .woocommerce-MyAccount-content,
+    .woocommerce-account .entry-content>.woocommerce .woocommerce-MyAccount-navigation,
+    .woocommerce-account #customer_login .col-1,
+    .woocommerce-account #customer_login .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;       
+    }
+    .top-bar {
+        text-align: center;
+        .search-form {
+            float: none;
+        }
+    }
+    .header-centered .site-branding {
+        text-align: left;
+    }
+    .featured-posts {
+        .featured-post {
+            min-height: 450px;
+        }
+    }    
+    .featured-cats-inner {
+        .col-md-2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        h6 {
+            margin-bottom: 0;
+        }
+    }
+    .footer-column {
+        margin-bottom: 30px;
+    }
+    .page-header {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .woocommerce-results-wrapper {
+        .col-md-6:not(.align-right) {
+            display: none;
+        }
+        .shop-filters-toggle {
+            float: left;
+        }
+    }
+    .single-product div.product .entry-summary,
+    .single-product div.product .woocommerce-product-gallery {
+        float: none;
+        width: 100%;
+    }
+
+    .shop_table.cart {
+        tr.cart_item {
+            display: block;
+            position: relative;
+            padding-left: 120px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .product-thumbnail {
+            width: 100px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            padding: 0;
+
+            img {
+                max-width: 100%;
+            }
+            &::before {
+                display: none;
+            }
+        }
+
+        td {
+            border: 0;
+            padding-top: 0;
+        }
+
+        .product-name {
+            border-top: 0;
+        }
+
+        .product-remove {
+            border: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            a {
+                line-height: 29px;
+            }
+        }
+
+        .actions {
+            padding-left: 0;
+            padding-right: 0;
+
+            &> .button {
+                float: none;
+                display: table;
+                margin: 0 auto;
+                min-width: 100%;
+            }
+            .coupon {
+                float: none;
+                text-align: center;
+                margin-bottom: 20px;
+
+                .button {
+                    width: 170px;
+                }
+            }            
+        }
+
+        #coupon_code {
+            width: calc( 100% - 180px);
+        }
+
+        .qty {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .product-subtotal {
+            border-bottom: 0;
+        }
+
+    }
+    .single-product div.product .entry-summary {
+        position: static;
+        padding-left: 0;
+    }
+}
+@media ( max-width: 575px ) {
+    .woocommerce-results-wrapper .woocommerce-ordering select {
+        max-width: 180px;
+    }
+    .sidebar-filters {
+        width: 100%;
+    }
+    .mobile-search-toggle .er-icon, .woocommerce-links .er-icon {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+
+        svg {
+            width: 14px;
+            height: 15px;
+        }
+    }
+    .loop-thumb-wrapper {
+        .product-placeholder {
+            display: none;
+        }
+    }
+}

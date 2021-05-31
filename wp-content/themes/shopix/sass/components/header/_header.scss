@@ -1,0 +1,322 @@
+.top-bar,
+.header-bottom,
+.site-header {
+	.container-fluid {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+}
+.site-header {
+	background-color: #fff;
+	position: relative;
+}
+.header-middle {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+.header-bottom {
+	background: #fff;
+	box-shadow: 0 0 15px rgba(0,0,0,.03);
+	border-top: 1px solid #ebebeb;
+}
+.site-title {
+	@include font-size(40);
+
+	a,
+	a:hover {
+		color: #000;
+	}
+}
+.custom-logo {
+	vertical-align: top;
+	max-width: 150px;
+}
+.site-title,
+.site-description {
+	margin: 0;
+}
+
+.top-bar {
+	background-color: #1c1c1c;
+	position: relative;
+	color: #fff;
+
+	a {
+		text-transform: none;
+		color: #fff;
+
+		&:hover {
+			color: $color__accent;
+		}
+	}
+
+	.align-left,
+	.align-center,
+	.align-right {
+		div:last-of-type {
+			border-right: 0;
+			padding-right: 0;
+		}
+	}
+}
+.header-items {
+	text-align: right;
+	display: inline-block;
+
+	& > a {
+		display: inline-block;
+		padding: 5px 7px;
+
+		.er-icon {
+			margin: 0;
+			transition: fill 0.3s;
+			line-height: 1;
+			fill: #fff;
+		}
+
+		&:hover {
+			.er-icon {
+				fill: $color__accent;
+			}
+		}
+	}
+}
+.widget_product_search,
+.widget_search,
+.site-header {
+	.woocommerce-product-search,
+	.search-form {
+		input[type="search"] {
+			width: 100%;
+		}
+		position: relative;
+	
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: '\e800';
+			font-family: 'Fontello';
+			height: 53px;
+			line-height: 53px;
+			width: 52px;
+			text-align: center;
+			background-color: $color__accent;
+			color: #fff;
+			z-index: 0;
+			transition: all 0.3s;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.03);
+	
+		}
+		
+		button,
+		.search-submit {
+			position: absolute;
+			top: 0;
+			right: 0;
+			text-indent: -9999em;
+			width: 52px;
+			padding-left: 0;
+			padding-right: 0;
+			background: transparent;
+			z-index: 11;
+		}
+	}	
+}
+.site-header {
+	.woocommerce-product-search,
+	.search-form {
+		&::after {
+			color: #000;
+			height: 54px;
+			background: transparent;
+		}	
+
+		button {
+			background: transparent !important;
+		}
+	}
+
+	.woocommerce-product-search {
+
+		input[type="search"] {
+			width: 100%;
+			display: inline-block;
+			border: 0;
+			border-bottom: 1px solid #ebebeb;
+			padding-left: 0;
+		}	
+	}
+
+}
+.header-contact {
+	display: inline-block;
+	font-weight: 600;
+	text-align: left;
+
+	a {
+		color: #000;
+	}
+
+	.col-md-4 {
+		padding-right: 0;
+	}
+
+	.er-icon svg {
+		width: 46px;
+		height: 46px;
+		fill: $color__accent;
+	}
+
+	.contact-info {
+		display: block;
+
+		&.heading {
+			@include font-size(13);
+			text-transform: uppercase;
+			color: #838383;
+			letter-spacing: 1px;
+		}
+	}
+}
+.header-text {
+	padding: 10px 15px 10px 0;
+	margin-right: 5px;
+	border-right: 1px solid rgba(255,255,255,.2);
+	display: inline-block;
+	@include font-size(13);
+}
+.button.header-button {
+	padding: 7px 18px;
+	color: #fff;
+	display: inline-block;
+
+	&:hover,
+	&:visited {
+		color: #fff;
+	}
+
+	&:focus {
+		outline: 1px dotted #000;
+	}
+}
+
+.header-centered,
+.header-default {
+	.header-bottom {
+		position: sticky;
+		top: 0;
+		z-index: 999;
+		box-shadow: 0 0 15px rgba(0,0,0,.03);
+	}
+
+	&.admin-bar {
+		.header-bottom {
+			top: 32px;
+		}
+	}
+}
+.header-centered {
+	.site-branding {
+		text-align: center;
+	}
+	.main-navigation > div > div > div > ul {
+		justify-content: center;
+	}
+}
+.header-inline {
+
+	.header-middle {
+		transition: padding 0.4s;
+	}
+	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 999;
+		box-shadow: 0 0 15px rgba(0,0,0,.03);
+
+		&.isSticky {
+			.header-middle {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+	&.admin-bar {
+		.site-header {
+			top: 32px;
+		}
+	}	
+}
+
+.mobile-header {
+	display: none;
+
+	.header-middle {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.search-overlay-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		z-index: 999;
+		align-items: center;
+		justify-content: center;
+		padding: 30px;
+		left: -100%;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		.admin-bar & {
+			top: 32px;
+		}
+
+		.search-cancel {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			z-index: 11;
+			cursor: pointer;
+
+			.er-icon {
+				fill: #fff;
+				margin-right: 0;
+
+				svg {
+					width: 22px;
+					height: 22px;
+				}
+			}
+		}
+
+		.search-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;			
+			background-color: rgba(0,0,0,.9);
+		}
+		
+		form {
+			width: 100%;
+			border: 0;
+		}
+
+		input[type="search"] {
+			display: block;
+			width: 100%;
+			padding-left: 15px;
+		}
+
+		&.display-search {
+			left: 0;
+			opacity: 1;
+		}
+	}
+}

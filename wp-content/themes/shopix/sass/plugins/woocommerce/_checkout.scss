@@ -1,0 +1,163 @@
+/**
+ * Checkout
+ */
+.order-review-wrapper {
+	padding: 30px;
+	border: 3px solid #ebebeb;
+
+	h3 {
+		margin-top: 0 !important;
+	}
+}
+ @media screen and (min-width: 768px) {
+
+	#customer_details {
+		display: inline-block;
+		width: 50%;
+	}
+
+	.order-review-wrapper {
+		position: sticky;
+		top: 0;
+		display: inline-block;
+		width: 45%;
+		vertical-align: top;
+		float: right;
+	}
+}
+
+#customer_details {
+	input[type="text"],
+	.input-text  {
+		width: 100%;
+	}
+
+	.col-1,
+	.col-2 {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+}
+
+#order_review {
+
+	table {
+		background-color: #fff;
+	}
+}
+
+#order_review_heading,
+#customer_details h3 {
+	@include font-size(16);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.woocommerce-form-coupon-toggle {
+	.woocommerce-info {
+
+		a {
+			margin-left: 15px;
+			color: #000;
+			text-decoration: underline;
+		}			
+	}
+}
+
+.woocommerce-form-coupon {
+	background: #f7f7f7;
+	padding: 15px 25px;
+
+	.form-row {
+		display: inline-block;
+	}
+}
+
+#ship-to-different-address-checkbox {
+	min-height: auto;
+}
+
+.payment_methods {
+	padding: 0;
+	list-style: none;
+
+	.woocommerce-info {
+		padding: 8px 25px;
+	}
+}
+
+.woocommerce-shipping-methods {
+	list-style: none;
+	padding-left: 0;
+}
+
+.woocommerce-privacy-policy-text {
+	p:last-of-type {
+		margin-bottom: 25px;
+	}
+}
+
+.woocommerce-form-coupon-toggle {
+	margin-bottom: 30px;
+}
+.woocommerce-checkout-review-order-table {
+	td,th {
+		border: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	th {
+		text-transform: uppercase;
+		@include font-size(13);
+		letter-spacing: 1px;
+		background: transparent;
+	}	
+	tfoot {
+		th {
+			text-align: left;
+		}
+		td {
+			text-align: right;
+		}
+
+		th,td {
+			border-top: 1px solid #ebebeb;
+			border-bottom: 1px solid #ebebeb;
+		}
+	}
+	.product-total {
+		text-align: right;
+	}
+	.product-name {
+		text-align: left;
+	}
+	.woocommerce-shipping-methods {
+		display: table;
+		margin-left: auto;
+		text-align: left;
+
+		label {
+			padding-left: 5px;
+		}
+	}
+}
+.woocommerce-checkout-payment {
+	a {
+		color: #000;
+	}
+}
+.about_paypal {
+	margin-left: 15px;
+}
+
+.woocommerce-order-received {
+	.col2-set {
+		.col-1,
+		.col-2 {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
